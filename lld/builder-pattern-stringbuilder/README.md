@@ -45,16 +45,21 @@ Understanding this pattern builds strong intuition for performance-oriented syst
 
 ## Project Structure
 
+```text
 builder-pattern-stringbuilder/
 ├── pom.xml
 ├── README.md
 └── src/
-└── main/
-└── java/
-└── io/github/kartiksethi/
-└── builder/
-└── stringbuilder/
-└── CustomStringBuilder.java
+    └── main/
+        └── java/
+            └── io/
+                └── github/
+                    └── kartiksethi/
+                        └── builder/
+                            └── stringbuilder/
+                                └── CustomStringBuilder.java
+```
+
 
 ---
 
