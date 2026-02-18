@@ -6,7 +6,7 @@ public final class LoggerChainFactory {
     public static Logger createLoggerChain() {
         Logger errorLogger = new ErrorLogger(null);
         Logger warnLogger = new WarnLogger(errorLogger);
-        Logger debugLogger = new DebugLogger(warnLogger);
-        return new InfoLogger(debugLogger);
+        Logger infoLogger = new DebugLogger(warnLogger);
+        return new DebugLogger(infoLogger);
     }
 }
