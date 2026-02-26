@@ -87,5 +87,5 @@ It serves as a long-term structured practice space for mastering system design a
 
 ## Author
 
-Kartik Sethi
+Kartik Sethi | 
 Software Engineer | Java Backend Developer | Competitive Programmer
