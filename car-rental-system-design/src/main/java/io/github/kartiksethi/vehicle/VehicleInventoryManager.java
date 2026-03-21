@@ -1,17 +1,20 @@
 package io.github.kartiksethi.vehicle;
 
+import io.github.kartiksethi.enums.VehicleStatus;
+import io.github.kartiksethi.enums.VehicleType;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class VehicleInventoryManager {
 
-    Map<Integer, Vehicle> vehicles = new HashMap<>();
-    Map<Integer, ReentrantLock> vehicleLocks = new HashMap<>();
+    private final Map<Integer, Vehicle> vehicles = new HashMap<>();
+    private final Map<Integer, ReentrantLock> vehicleLocks = new HashMap<>();
 
     public VehicleInventoryManager() {}
 
-    Vehicle getById(int vehicleId){
+    public Vehicle getById(int vehicleId){
         Vehicle vehicle =  vehicles.get(vehicleId);
         if(vehicle == null){
             throw new RuntimeException("No vehicle found with id:"+vehicleId);

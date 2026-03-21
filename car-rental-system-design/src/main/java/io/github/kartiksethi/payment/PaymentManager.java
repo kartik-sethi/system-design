@@ -1,6 +1,7 @@
 package io.github.kartiksethi.payment;
 
 import io.github.kartiksethi.billing.Bill;
+import io.github.kartiksethi.enums.BillStatus;
 import io.github.kartiksethi.enums.PaymentMode;
 
 import java.util.HashMap;
@@ -24,6 +25,7 @@ public class PaymentManager {
         }
         Payment payment = strategy.makePayment(bill, amount);
         payments.put(payment.getId(), payment);
+        bill.setBillStatus(BillStatus.PAID);
         return payment;
     }
 

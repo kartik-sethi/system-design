@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ReservationManager {
 
-    ConcurrentHashMap<Integer, Reservation> reservations = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<Integer, Reservation> reservations = new ConcurrentHashMap<>();
 
     public Reservation addReservation(int storeId, int vehicleId, int userId, Date bookedFrom, Date bookedTo, ReservationType reservationType){
         int id = (int) (Math.random() * 10000);
@@ -27,7 +27,7 @@ public class ReservationManager {
         return reservations.get(reservationId);
     }
 
-    Reservation findByStoreIdAndVehicleIdAndIn(int storeId, int vehicleId, Date from, Date to){
+    public Reservation findByStoreIdAndVehicleIdAndIn(int storeId, int vehicleId, Date from, Date to){
         return reservations.values().stream().filter(reservation -> {
             return reservation.getStoreId()==storeId && reservation.getVehicleId()==vehicleId && reservation.getBookedFrom().before(to) && reservation.getBookedTo().after(from);
         }).findFirst().orElse(null);

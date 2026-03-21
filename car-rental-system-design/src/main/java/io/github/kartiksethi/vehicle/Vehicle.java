@@ -1,5 +1,8 @@
 package io.github.kartiksethi.vehicle;
 
+import io.github.kartiksethi.enums.VehicleStatus;
+import io.github.kartiksethi.enums.VehicleType;
+
 public class Vehicle {
     
     private final int id;

@@ -7,8 +7,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class BillingManager {
 
-    ConcurrentHashMap<Integer, Bill> bills = new ConcurrentHashMap<>();
-    ConcurrentHashMap<ReservationType, BillingStrategy> billingStrategies = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<Integer, Bill> bills = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<ReservationType, BillingStrategy> billingStrategies = new ConcurrentHashMap<>();
 
     public BillingManager(){
         billingStrategies.put(ReservationType.HOURLY, new HourlyBillingStrategy(10));
