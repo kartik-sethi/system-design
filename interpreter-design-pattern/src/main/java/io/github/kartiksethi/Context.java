@@ -3,7 +3,7 @@ package io.github.kartiksethi;
 import java.util.HashMap;
 
 public class Context {
-    HashMap<String, Object> variables = new HashMap<>();
+    private final HashMap<String, Object> variables = new HashMap<>();
 
     public void assign(String name, Integer value) {
         variables.put(name, value);
